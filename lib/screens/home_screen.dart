@@ -30,7 +30,8 @@ class HomeScreen extends StatelessWidget {
                         children: [
                           Text(
                             'Good morning!',
-                            style: Styles.headLineStyle3,
+                            style: Styles.headLineStyle3
+                                .copyWith(color: Colors.grey.shade400),
                           ),
                           const Gap(5),
                           Text(

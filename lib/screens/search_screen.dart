@@ -4,6 +4,7 @@ import 'package:ticket_booking_first_flutter_app/utils/app_layout.dart';
 import 'package:ticket_booking_first_flutter_app/utils/app_styles.dart';
 import 'package:ticket_booking_first_flutter_app/widgets/double_text_widget.dart';
 import 'package:ticket_booking_first_flutter_app/widgets/icon_text.dart';
+import 'package:ticket_booking_first_flutter_app/widgets/options_tab_widget.dart';
 
 class SearchScreen extends StatelessWidget {
   const SearchScreen({super.key});
@@ -23,40 +24,9 @@ class SearchScreen extends StatelessWidget {
                 style: Styles.headLineStyle1
                     .copyWith(fontSize: AppLayout.getWidth(35))),
             Gap(AppLayout.getHeight(20)),
-            FittedBox(
-              child: Container(
-                padding: const EdgeInsets.all(2.5),
-                decoration: BoxDecoration(
-                    borderRadius:
-                        BorderRadius.circular(AppLayout.getHeight(50)),
-                    color: const Color(0xFFF4F6FD)),
-                child: Row(
-                  children: [
-                    // airline tickets
-                    Container(
-                      width: size.width * 0.44,
-                      padding: EdgeInsets.symmetric(
-                          vertical: AppLayout.getHeight(7)),
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.horizontal(
-                              left: Radius.circular(AppLayout.getHeight(50))),
-                          color: Colors.white),
-                      child: const Center(child: Text('Airline Tickets')),
-                    ),
-                    //hotels
-                    Container(
-                      width: size.width * 0.44,
-                      padding: EdgeInsets.symmetric(
-                          vertical: AppLayout.getHeight(7)),
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.horizontal(
-                              right: Radius.circular(AppLayout.getHeight(50))),
-                          color: Colors.transparent),
-                      child: const Center(child: Text('Hotels')),
-                    )
-                  ],
-                ),
-              ),
+            const OptionsTab(
+              option1: 'Airline Tickets',
+              option2: 'Hotels',
             ),
             Gap(AppLayout.getHeight(25)),
             const AppIconText(
